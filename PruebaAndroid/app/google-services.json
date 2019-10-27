@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1019422692314",
+    "firebase_url": "https://adherymovil.firebaseio.com",
+    "project_id": "adherymovil",
+    "storage_bucket": "adherymovil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019422692314:android:a2277534a92e996f05e6e3",
+        "android_client_info": {
+          "package_name": "com.example.pruebaandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019422692314-4pnuecvekpk3n2p0tqmnvgcnkn3p4u3o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pruebaandroid",
+            "certificate_hash": "e365d331d23dbccea6523f8e567fedd370768344"
+          }
+        },
+        {
+          "client_id": "1019422692314-6l10hv0rea1l9cgtp9fafvd3focerskg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCumhlxZ2DqZMKaLgPptsiDWbUZ5imvsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019422692314-6l10hv0rea1l9cgtp9fafvd3focerskg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
