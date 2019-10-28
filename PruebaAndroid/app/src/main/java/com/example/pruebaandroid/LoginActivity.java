@@ -44,11 +44,11 @@ public class LoginActivity extends AppCompatActivity {
                 if(!correo.isEmpty() && !contrasena.isEmpty()){
                     loginUser();
                 }else{
-<<<<<<< HEAD
+
                     Toast.makeText( LoginActivity.this ,"Complete los campos, por favor",Toast.LENGTH_SHORT).show();
-=======
-                    Toast.makeText( LoginActivity.this ,"Complete Erika",Toast.LENGTH_SHORT).show();
->>>>>>> 8b96b0085c6c4abe6626fd20d60f5638ea37ade9
+
+                    Toast.makeText( LoginActivity.this ,"Complete Ojala se pueda",Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
