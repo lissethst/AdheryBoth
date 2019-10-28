@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(!correo.isEmpty() && !contrasena.isEmpty()){
                     loginUser();
                 }else{
-                    Toast.makeText( LoginActivity.this ,"Complete los campos",Toast.LENGTH_SHORT).show();
+                    Toast.makeText( LoginActivity.this ,"Complete Erika",Toast.LENGTH_SHORT).show();
                 }
             }
         });
