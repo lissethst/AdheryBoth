@@ -9,17 +9,20 @@
     tools:context=".SuccesUser">
 
     <TextView
+        android:id ="@+id/txtViewUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Usuario Registrado , Muestra Perfil"
+        android:text="Nombre de usuario"
         android:textAlignment="center"
         android:textSize="18sp"/>
+
+
 
     <Button
         android:id="@+id/btnCerrarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CERRAR SESION"
+        android:text="Continuar"
         android:layout_margin="20dp"
         android:background="@color/colorPrimary"
         android:textColor="@android:color/white"

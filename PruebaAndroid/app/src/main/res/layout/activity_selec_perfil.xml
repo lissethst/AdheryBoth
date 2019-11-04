@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".SelecPerfilActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id ="@+id/txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de usuario"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btnPerfilMedico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medico Especialista"
+            android:layout_marginTop="150dp"
+            android:background="@color/colorPerfil1"
+            android:textColor="@android:color/black"
+            />
+        <Button
+            android:id="@+id/btnPerfilPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paciente"
+            android:layout_marginTop="150dp"
+            android:background="@color/colorPerfil2"
+            android:textColor="@android:color/black"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
