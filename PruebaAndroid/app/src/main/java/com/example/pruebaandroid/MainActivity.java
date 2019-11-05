@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    Toast.makeText( MainActivity.this ,"Ingreso",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this , SelecPerfilActivity.class));
                     finish();
 

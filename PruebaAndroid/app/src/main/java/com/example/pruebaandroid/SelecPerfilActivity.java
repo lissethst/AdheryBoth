@@ -35,6 +35,7 @@ public class SelecPerfilActivity extends AppCompatActivity {
         mButtonPerfilMedico = findViewById(R.id.btnPerfilMedico);
         mTextView = (TextView) findViewById(R.id.txtView);
         obtenerDatos();
+
         mButtonPerfilMedico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +53,7 @@ public class SelecPerfilActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(tipo.equals("2")){
-                    startActivity(new Intent(SelecPerfilActivity.this , MainActivity.class));
+                    startActivity(new Intent(SelecPerfilActivity.this , Menu_PacienteActivity.class));
                     finish();
                 }else{
                     Toast.makeText( SelecPerfilActivity.this ,"No tiene los permisos de Paciente",Toast.LENGTH_SHORT).show();
@@ -65,10 +66,13 @@ public class SelecPerfilActivity extends AppCompatActivity {
     String tipo;
     private void obtenerDatos(){
         String id =mAuth.getCurrentUser().getUid();
+
         mDataBase.child("Users").child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 if(dataSnapshot.exists()){
+
                     tipo = dataSnapshot.child("Tipo").getValue().toString();
                     mTextView.setText(tipo);
                 }
@@ -79,4 +83,6 @@ public class SelecPerfilActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

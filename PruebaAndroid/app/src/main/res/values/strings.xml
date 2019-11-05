@@ -5,4 +5,7 @@
         <item>Medico Endocrinologo</item>
         <item>Paciente</item>
     </string-array>
+
+    <string name="nodoMedico">Medico</string>
+    <string name="nodoUser">Users</string>
 </resources>

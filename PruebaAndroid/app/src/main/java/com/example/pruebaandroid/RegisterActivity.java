@@ -145,7 +145,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
        String text = parent.getItemAtPosition(position).toString();
-       if(text =="Paciente"){
+       if(text.equals("Paciente")){
            type_user = "2";
        }else{
            type_user = "1";
