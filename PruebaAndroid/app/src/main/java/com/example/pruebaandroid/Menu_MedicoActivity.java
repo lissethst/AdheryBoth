@@ -25,5 +25,14 @@ public class Menu_MedicoActivity extends AppCompatActivity {
                 startActivity(perfil);
             }
         });
+
+        card_PerfilMedico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent perfil = new Intent(Menu_MedicoActivity.this,Perfil_Medico.class);
+                startActivity(perfil);
+            }
+        });
+
     }
 }

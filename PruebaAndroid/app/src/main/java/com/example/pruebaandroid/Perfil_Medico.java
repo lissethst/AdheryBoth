@@ -13,26 +13,27 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Perfil_Paciente extends AppCompatActivity {
+public class Perfil_Medico extends AppCompatActivity {
+
     private FirebaseAuth mAuth;
     private DatabaseReference mDataBase;
-    private EditText mEditNamePaciente;
-    private EditText mEditApePaciente;
-    private EditText mEditEdadPaciente;
-    private EditText mEditCorreoPaciente;
+    private EditText mEditNameMedico;
+    private EditText mEditApeMedico;
+    private EditText mEditEdadMedico;
+    private EditText mEditCorreoMedico;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil__paciente);
+        setContentView(R.layout.activity_perfil__medico);
 
         mAuth = FirebaseAuth.getInstance();
         mDataBase = FirebaseDatabase.getInstance().getReference();
 
-        mEditNamePaciente = (EditText) findViewById(R.id.txt_nombre_paciente);
-        mEditApePaciente = (EditText) findViewById(R.id.txt_ape_paciente);
-        mEditEdadPaciente = (EditText)findViewById(R.id.txt_edad_paciente);
-        mEditCorreoPaciente = (EditText) findViewById(R.id.txt_correo_paciente);
+        mEditNameMedico = (EditText) findViewById(R.id.txt_nombre_medico);
+        mEditApeMedico = (EditText) findViewById(R.id.txt_ape_medico);
+        mEditEdadMedico = (EditText)findViewById(R.id.txt_edad_medico);
+        mEditCorreoMedico = (EditText) findViewById(R.id.txt_correo_medico);
         obtenerDatos();
     }
 
@@ -45,9 +46,9 @@ public class Perfil_Paciente extends AppCompatActivity {
                     String name = dataSnapshot.child("Nombre").getValue().toString();
                     String ape = dataSnapshot.child("Apellidos").getValue().toString();
                     String correo = dataSnapshot.child("Correo").getValue().toString();
-                    mEditNamePaciente.setText(name);
-                    mEditApePaciente.setText(ape);
-                    mEditCorreoPaciente.setText(correo);
+                    mEditNameMedico.setText(name);
+                    mEditApeMedico.setText(ape);
+                    mEditCorreoMedico.setText(correo);
                 }
             }
 

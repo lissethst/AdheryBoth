@@ -6,6 +6,19 @@
         <item>Paciente</item>
     </string-array>
 
+    <string-array name="Frecuencia">
+        <item>Todos los dias</item>
+
+
+    </string-array>
+
+    <string-array name="Intervalo">
+
+        <item>Cada 8 horas</item>
+        <item>Cada 12 horas</item>
+
+    </string-array>
+
     <string name="nodoMedico">Medico</string>
     <string name="nodoUser">Users</string>
 </resources>
