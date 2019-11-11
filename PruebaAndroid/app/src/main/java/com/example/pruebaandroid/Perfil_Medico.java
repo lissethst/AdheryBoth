@@ -20,6 +20,7 @@ public class Perfil_Medico extends AppCompatActivity {
     private EditText mEditNameMedico;
     private EditText mEditApeMedico;
     private EditText mEditEdadMedico;
+    private EditText mEditCelularMedico;
     private EditText mEditCorreoMedico;
 
     @Override
@@ -33,6 +34,7 @@ public class Perfil_Medico extends AppCompatActivity {
         mEditNameMedico = (EditText) findViewById(R.id.txt_nombre_medico);
         mEditApeMedico = (EditText) findViewById(R.id.txt_ape_medico);
         mEditEdadMedico = (EditText)findViewById(R.id.txt_edad_medico);
+        mEditCelularMedico = (EditText)findViewById(R.id.txt_cel_medico) ;
         mEditCorreoMedico = (EditText) findViewById(R.id.txt_correo_medico);
         obtenerDatos();
     }
@@ -45,9 +47,13 @@ public class Perfil_Medico extends AppCompatActivity {
                 if(dataSnapshot.exists()){
                     String name = dataSnapshot.child("Nombre").getValue().toString();
                     String ape = dataSnapshot.child("Apellidos").getValue().toString();
+                    String edad = dataSnapshot.child("Edad").getValue().toString();
+                    String celular = dataSnapshot.child("Celular").getValue().toString();
                     String correo = dataSnapshot.child("Correo").getValue().toString();
                     mEditNameMedico.setText(name);
                     mEditApeMedico.setText(ape);
+                    mEditEdadMedico.setText(edad);
+                    mEditCelularMedico.setText(celular);
                     mEditCorreoMedico.setText(correo);
                 }
             }

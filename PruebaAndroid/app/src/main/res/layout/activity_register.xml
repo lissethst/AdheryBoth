@@ -8,14 +8,24 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
-
+    <TextView
+        android:id="@+id/textPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Registro de Usuario"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/txt_nombrePersona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:paddingTop="12dp"
+        android:layout_marginTop="10dp"
         android:hint="Nombre"
         />
 
@@ -23,27 +33,25 @@
         android:id="@+id/txt_apePersona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:paddingTop="12dp"
         android:hint="Apellidos"
         />
 
 
     <EditText
-        android:id="@+id/txt_correoPersona"
+        android:id="@+id/txt_edadPersona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="12dp"
-        android:hint="Correo electronico"
+        android:hint="Edad"
         />
 
     <EditText
-        android:id="@+id/txt_pasPersona"
+        android:id="@+id/txt_celularPersona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:paddingTop="12dp"
-        android:hint="Contraseña"
+        android:hint="Celular"
         />
 
     <Spinner
@@ -53,7 +61,48 @@
         android:layout_margin="15dp"
 
 
-   />
+        />
+    <EditText
+        android:id="@+id/txt_glucosaPersona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:hint="Glucosa"
+        />
+    <EditText
+        android:id="@+id/txt_sangrePersona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:hint="Sangre"
+        />
+    <EditText
+        android:id="@+id/txt_colesterolPersona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:hint="Colesterol"
+        />
+
+
+    <EditText
+        android:id="@+id/txt_correoPersona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:layout_marginTop="40dp"
+        android:hint="Correo electronico"
+        />
+
+    <EditText
+        android:id="@+id/txt_pasPersona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:hint="Contraseña"
+        />
+
+
 
     <LinearLayout
         android:layout_width="match_parent"

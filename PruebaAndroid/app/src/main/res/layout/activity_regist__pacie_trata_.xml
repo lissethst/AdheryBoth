@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".Regist_PacieTrata_Activity">
+
+
+    <TextView
+        android:id="@+id/text_titulo_tratamiento_esp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Registrar Tratamiento"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/txtBuscPaciTrata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Paciente" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imageButtonPaci"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@android:drawable/ic_search_category_default" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/text_pac_eleg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="left"
+        android:text="Paciente Seleccionado : "
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/txt_idPaci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="12dp"
+        android:hint="Paciente Elegido"
+        />
+
+    <Spinner
+        android:id="@+id/spinner_typetrata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        />
+    <TextView
+        android:id="@+id/text_med_eleg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="left"
+        android:text="Medico Encargado : "
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/txt_TrataEspecia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:hint="Medico"
+        />
+
+    <Button
+        android:id="@+id/btnAddMedicamento"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:text="Add Medicamentos"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="190dp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        />
+    <TextView
+        android:id="@+id/list_medicamentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="left"
+        android:text="Lista de Medicamentos : "
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list_medica"
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:layout_marginTop="5dp"
+
+        />
+
+    <TextView
+        android:id="@+id/text_indicaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="left"
+        android:text="Indicaciones Adicionales : "
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxLines="5"
+            android:minLines="3"
+            android:layout_marginTop="5dp"
+            android:scrollbars="vertical"
+            android:id="@+id/text_cont_indicaciones"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSalvTrata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Tratamiento"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        />
+
+</LinearLayout>

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -28,10 +29,16 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
    // private EditText mEditTextDni;
     private EditText mEditTextName;
     private EditText mEditTextApellidos;
-  //  private EditText mEditTextEdad;
-  //  private EditText getmEditTextGlucosa;
+    private EditText mEditTextEdad;
+    private EditText mEditTextCelular;
+    private EditText mEditTextGlucosa;
+    private EditText mEditTextColesterol;
+    private EditText mEditTextSangre;
+
     private EditText mEditTextCorreo;
     private EditText mEditTextContra;
+
+
     private Button mButtonRegistro;
     private Button mButtonLogin;
     private Spinner mSpinnerType;
@@ -41,6 +48,9 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
     private String apellido="";
     private String edad;
     private String glucosa="-";
+    private String celular="";
+    private String sangre="-";
+    private String colesterol="-";
     private String correo="";
     private String contrasena="";
 
@@ -57,16 +67,22 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         idL=mAuth.getCurrentUser().getUid();
         mDataBase = FirebaseDatabase.getInstance().getReference();
 
-       // mEditTextDni = (EditText) findViewById(R.id.txt_dniPersona);
-        // mEditTextEdad = (EditText)findViewById(R.id.txt_edadPersona);
-        //getmEditTextGlucosa = (EditText)findViewById(R.id.txt_glucosaPersona);
-
 
         mEditTextName = (EditText)findViewById(R.id.txt_nombrePersona);
         mEditTextApellidos = (EditText)findViewById(R.id.txt_apePersona);
+        mEditTextEdad = (EditText)findViewById(R.id.txt_edadPersona);
+        mEditTextCelular = (EditText)findViewById(R.id.txt_celularPersona);
+        mEditTextGlucosa = (EditText)findViewById(R.id.txt_glucosaPersona);
+        mEditTextColesterol = (EditText)findViewById(R.id.txt_colesterolPersona);
+        mEditTextSangre = (EditText) findViewById(R.id.txt_sangrePersona);
+
         mEditTextCorreo = (EditText)findViewById(R.id.txt_correoPersona);
         mEditTextContra = (EditText)findViewById(R.id.txt_pasPersona);
         mButtonRegistro = (Button)findViewById(R.id.btnRegistroPaciente);
+
+        mEditTextSangre.setVisibility(View.GONE);
+        mEditTextGlucosa.setVisibility(View.GONE);
+        mEditTextColesterol.setVisibility(View.GONE);
 
 
         mSpinnerType =(Spinner) findViewById(R.id.spinner_type);
@@ -80,11 +96,14 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View view){
                 dni = "76433485";
-                //  edad = mEditTextEdad.getText().toString();
-                //  glucosa = getmEditTextGlucosa.getText().toString();
 
                 nombre = mEditTextName.getText().toString();
                 apellido = mEditTextApellidos.getText().toString();
+                edad=mEditTextEdad.getText().toString();
+                celular=mEditTextCelular.getText().toString();
+                colesterol=mEditTextColesterol.getText().toString();
+                sangre=mEditTextSangre.getText().toString();
+                glucosa=mEditTextGlucosa.getText().toString();
                 correo=mEditTextCorreo.getText().toString();
                 contrasena=mEditTextContra.getText().toString();
 
@@ -112,13 +131,19 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
                     Map<String,Object> map = new HashMap<>();
                     map.put("Nombre",nombre);
                     map.put("Apellidos",apellido);
-                 //   map.put("Edad",edad);
-                 //   map.put("Glucosa",glucosa);
+                    map.put("Edad",edad);
+                    map.put("Celular",celular);
+
+
                     map.put("Correo",correo);
                     map.put("Contrasena",contrasena);
                     map.put("Tipo",type_user);
                     String id =mAuth.getCurrentUser().getUid();
+
                     map.put("Medico",idL);
+                    map.put("Glucosa",glucosa);
+                    map.put("Colesterol",colesterol);
+                    map.put("Sangre",sangre);
 
                     mDataBase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -147,11 +172,21 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
        String text = parent.getItemAtPosition(position).toString();
        if(text.equals("Paciente")){
            type_user = "2";
+           idL = mAuth.getCurrentUser().getUid();
+           mEditTextSangre.setVisibility(View.VISIBLE);
+           mEditTextGlucosa.setVisibility(View.VISIBLE);
+           mEditTextColesterol.setVisibility(View.VISIBLE);
        }else{
+           idL = "-";
            type_user = "1";
+           mEditTextSangre.setText("-");
+           mEditTextColesterol.setText("-");
+           mEditTextGlucosa.setText("-");
+
+           mEditTextSangre.setVisibility(View.GONE);
+           mEditTextGlucosa.setVisibility(View.GONE);
+           mEditTextColesterol.setVisibility(View.GONE);
        }
-
-
     }
 
     @Override

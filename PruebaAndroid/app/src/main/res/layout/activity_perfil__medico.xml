@@ -151,7 +151,7 @@
                                 android:textSize="14sp" />
 
                             <EditText
-                                android:id="@+id/editText2"
+                                android:id="@+id/txt_cel_medico"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:ems="10"

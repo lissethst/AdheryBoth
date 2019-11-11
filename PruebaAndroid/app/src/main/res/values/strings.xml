@@ -6,6 +6,11 @@
         <item>Paciente</item>
     </string-array>
 
+    <string-array name="types_medica">
+        <item>Farmacologico</item>
+        <item>Natural</item>
+    </string-array>
+
     <string-array name="Frecuencia">
         <item>Todos los dias</item>
 
