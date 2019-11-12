@@ -22,7 +22,7 @@
         android:id="@+id/btnCerrarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Continuar"
+        android:text="Cerrar Sesion"
         android:layout_margin="20dp"
         android:background="@color/colorPrimary"
         android:textColor="@android:color/white"

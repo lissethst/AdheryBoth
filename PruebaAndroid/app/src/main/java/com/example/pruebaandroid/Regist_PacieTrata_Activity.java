@@ -1,10 +1,8 @@
 package com.example.pruebaandroid;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,12 +16,8 @@ import android.widget.Toast;
 
 import com.example.pruebaandroid.model.Medicamento;
 import com.example.pruebaandroid.model.MyTratamDialog;
-import com.example.pruebaandroid.model.Tratamiento;
 import com.example.pruebaandroid.model.Users;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -57,6 +51,7 @@ public class Regist_PacieTrata_Activity extends AppCompatActivity  implements Ad
     String idPac;
     String idTrata;
     String fecha;
+    private Users nuevo ;
 
     private ImageButton mButtonBuscarTra;
     private Button mButtonSalvarTrata;
@@ -64,6 +59,7 @@ public class Regist_PacieTrata_Activity extends AppCompatActivity  implements Ad
     private EditText txtPacEncontrado;
 
     public String indicaciones;
+    public String nombrePaciente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,8 +116,12 @@ public class Regist_PacieTrata_Activity extends AppCompatActivity  implements Ad
             public void onClick(View v) {
                 //Guardar los datos del Tratamiento en nodos y subnodos
                 indicaciones=mContIndica.getText().toString();
+                nombrePaciente =txtPacEncontrado.getText().toString();
+                Toast.makeText( Regist_PacieTrata_Activity.this ,"id?? "+nuevo.getIdUs(),Toast.LENGTH_SHORT).show();
+
                 Map<String,Object> map = new HashMap<>();
-                map.put("IdPaciente",idPac);
+                map.put("IdPaciente",nuevo.getIdUs());
+                map.put("NombrePaciente",nuevo.getNombre()+" "+nuevo.getApellidos());
                 String id =mAuth.getCurrentUser().getUid();
                 map.put("IdMedico",id);
                 map.put("FechaReg",fecha);
@@ -161,6 +161,10 @@ public class Regist_PacieTrata_Activity extends AppCompatActivity  implements Ad
                             String Nombre = nameEncontrado.getNombre();
                             String Apellidos = nameEncontrado.getApellidos();
                             if(Nombre.equals(txtPaciTrata.getText().toString())){
+                                nuevo = new Users();
+                                nuevo.setIdUs(idPac);
+                                nuevo.setNombre(Nombre);
+                                nuevo.setApellidos(Apellidos);
                                 Toast.makeText( Regist_PacieTrata_Activity.this ,"Aqui "+idPac,Toast.LENGTH_SHORT).show();
                                 txtPacEncontrado.setText(Nombre +" "+Apellidos);
                                 txtPaciTrata.setText("");

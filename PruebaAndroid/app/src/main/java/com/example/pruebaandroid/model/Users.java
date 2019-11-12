@@ -8,6 +8,16 @@ public class Users {
     private String Contrasena;
     private String Medico;
 
+    public String getIdUs() {
+        return IdUs;
+    }
+
+    public void setIdUs(String idUs) {
+        IdUs = idUs;
+    }
+
+    private String IdUs;
+
 
     public String getNombre() {
         return Nombre;
