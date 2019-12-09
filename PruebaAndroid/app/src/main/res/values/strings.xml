@@ -13,7 +13,6 @@
 
     <string-array name="Frecuencia">
         <item>Todos los días</item>
-        <item>Días de la semana</item>
         <item>Fines de la semana</item>
     </string-array>
 

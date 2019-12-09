@@ -20,6 +20,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 
 public class NewAlert_Activity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -112,5 +115,6 @@ public class NewAlert_Activity extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

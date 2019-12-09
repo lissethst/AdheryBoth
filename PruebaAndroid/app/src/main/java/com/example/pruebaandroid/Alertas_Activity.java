@@ -1,6 +1,7 @@
 package com.example.pruebaandroid;
 
 import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -20,11 +21,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import android.widget.Button;
 
 public class Alertas_Activity extends AppCompatActivity {
 
     private Button mButtonNewAlerta;
-
 
     private DatabaseReference databaseReference;
     private ListView listView;
