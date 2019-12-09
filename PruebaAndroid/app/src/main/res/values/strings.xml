@@ -1,3 +1,41 @@
 <resources>
-    <string name="app_name">PruebaAndroid</string>
+    <string name="app_name">AdheryChat</string>
+
+    <string-array name="types">
+        <item>Medico Endocrinologo</item>
+        <item>Paciente</item>
+    </string-array>
+
+    <string-array name="types_medica">
+        <item>Farmacologico</item>
+        <item>Natural</item>
+    </string-array>
+
+    <string-array name="Frecuencia">
+        <item>Todos los días</item>
+        <item>Días de la semana</item>
+        <item>Fines de la semana</item>
+    </string-array>
+
+    <string-array name="Intervalo">
+        <item>Cada 2 horas</item>
+        <item>Cada 3 horas</item>
+        <item>Cada 4 hora</item>
+        <item>Cada 5 horas</item>
+        <item>Cada 6 horas</item>
+        <item>Cada 7 hora</item>
+        <item>Cada 8 horas</item>
+        <item>Cada 9 horas</item>
+        <item>Cada 10 hora</item>
+        <item>Cada 11 horas</item>
+        <item>Cada 12 horas</item>
+    </string-array>
+
+    <string-array name="opciones_busqueda">
+        <item>Nombre</item>
+        <item>DNI</item>
+    </string-array>
+
+    <string name="nodoMedico">Medico</string>
+    <string name="nodoUser">Users</string>
 </resources>

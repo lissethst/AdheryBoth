@@ -11,7 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".Regist_PacieTrata_Activity"></activity>
+        <activity android:name=".Tratamiento_Activity" />
+        <activity android:name=".NewAlert_Activity" />
+        <activity android:name=".Alertas_Activity" />
+        <activity android:name=".Perfil_Medico" />
+        <activity android:name=".Perfil_Paciente" />
+        <activity android:name=".Menu_PacienteActivity" />
+        <activity android:name=".Lista_PacientesActivity" />
+        <activity android:name=".SelecPerfilActivity" />
+        <activity android:name=".Menu_MedicoActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".SuccesUser" />
         <activity android:name=".MainActivity">
             <intent-filter>
