@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AdheryChat</string>
+    <string name="app_name">AdheryBoth</string>
 
     <string-array name="types">
         <item>Medico Endocrinologo</item>
