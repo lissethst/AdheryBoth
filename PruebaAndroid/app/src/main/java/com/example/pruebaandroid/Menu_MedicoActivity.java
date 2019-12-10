@@ -12,6 +12,7 @@ public class Menu_MedicoActivity extends AppCompatActivity {
     private CardView card_PerfilMedico;
     private CardView card_Pacientes;
     private CardView card_TratamientoRegistro;
+    private CardView  card_Seguimiento;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class Menu_MedicoActivity extends AppCompatActivity {
         card_PerfilMedico = (CardView) findViewById(R.id.id_perfil_especialista);
         card_Pacientes = findViewById(R.id.id_pacientes);
         card_TratamientoRegistro = findViewById(R.id.id_tratamiento_especialista);
+        card_Seguimiento = findViewById(R.id.id_seguimiento);
 
         card_Pacientes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,14 @@ public class Menu_MedicoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent perfil = new Intent(Menu_MedicoActivity.this,Tratamiento_Activity.class);
                 startActivity(perfil);
+            }
+        });
+
+        card_Seguimiento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent seguimiento = new Intent(Menu_MedicoActivity.this,Seguimiento_Activity.class);
+                startActivity(seguimiento);
             }
         });
 
